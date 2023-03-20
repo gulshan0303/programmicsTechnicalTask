@@ -1,26 +1,9 @@
 const mongoose = require('mongoose');
-
 const imageSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  imageUrl: {
-    type: String,
-    required: true,
-  },
-  liked: {
-    type: Boolean,
-    default: false,
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now,
-  },
+  name: { type: String, required: true },
+  clickTime: { type: Date, required: true },
+  image: { type: String, required: true },
 });
 
-module.exports = mongoose.model('Image', imageSchema);
+const imageModel = mongoose.model('image', imageSchema);
+module.exports = imageModel;

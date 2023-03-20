@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
   },
   clickTime: {
     type: Date,
-    required: true,
+   
   },
 });
 

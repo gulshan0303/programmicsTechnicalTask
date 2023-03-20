@@ -20,6 +20,7 @@ exports.signup = async (req, res, next) => {
     const user = new User({
       name: req.body.name,
       email: req.body.email,
+      image:req.body.image,
       password: hashedPassword,
     });
 
